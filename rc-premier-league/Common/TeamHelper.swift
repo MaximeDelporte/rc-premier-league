@@ -19,7 +19,8 @@ struct TeamHelper {
             Team(
                 name: "Aston Villa",
                 imageName: "aston-villa",
-                description: ""
+                description: "",
+                logoIsRound: false
             ),
             Team(
                 name: "Manchester City",
@@ -29,7 +30,8 @@ struct TeamHelper {
             Team(
                 name: "Arsenal",
                 imageName: "arsenal",
-                description: ""
+                description: "",
+                logoIsRound: false
             ),
             Team(
                 name: "Tottenham",
@@ -39,7 +41,8 @@ struct TeamHelper {
             Team(
                 name: "West Ham",
                 imageName: "west-ham",
-                description: ""
+                description: "",
+                logoIsRound: false
             ),
             Team(
                 name: "Brighton",
@@ -69,12 +72,14 @@ struct TeamHelper {
             Team(
                 name: "Bournemouth",
                 imageName: "bournemouth",
-                description: ""
+                description: "",
+                logoIsRound: false
             ),
             Team(
                 name: "Fulham",
                 imageName: "fulham",
-                description: ""
+                description: "",
+                logoIsRound: false
             ),
             Team(
                 name: "Crystal Palace",
@@ -104,7 +109,8 @@ struct TeamHelper {
             Team(
                 name: "Burnley",
                 imageName: "burnley",
-                description: ""
+                description: "",
+                logoIsRound: false
             ),
             Team(
                 name: "Sheffield",

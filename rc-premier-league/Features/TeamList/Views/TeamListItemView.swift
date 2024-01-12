@@ -23,8 +23,10 @@ struct TeamListItemView: View {
             ZStack {
                 Image(team.imageName)
                     .resizable()
-                    .padding(.vertical, 8)
-                    .padding(.horizontal, 8)
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.top, team.logoIsRound ? 4 : 9)
+                    .padding(.bottom, 4)
+                    .padding(.horizontal, 4)
             }
             .background(.white)
             .frame(width: imageSize, height: imageSize)
@@ -71,7 +73,7 @@ struct TeamListItemView: View {
 }
 
 #Preview {
-    let teamIndex = 0
+    let teamIndex = 1
     let team = TeamHelper.allTeams[teamIndex]
     let rank = teamIndex + 1
     return TeamListItemView(rank: rank, team: team)
