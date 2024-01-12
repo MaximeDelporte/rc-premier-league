@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect x="0" y="0" width="512" height="512" style="fill:white;fill-opacity:0;"/>
+    <g id="Wolverhampton_Wanderers.svg" transform="matrix(0.789474,0,0,0.789474,256,256)">
+        <g transform="matrix(1,0,0,1,-285,-247.5)">
+            <path id="polygon2582" d="M144.788,2.961L3.286,248.152L144.788,493.324L427.794,493.324L569.286,248.152L427.794,2.961L144.788,2.961Z" style="fill:white;fill-rule:nonzero;"/>
+            <path id="path2584" d="M424.747,8.229C426.245,10.821 561.715,245.571 563.213,248.153C561.715,250.736 426.245,485.475 424.747,488.067L147.826,488.067C146.338,485.476 10.857,250.735 9.37,248.153C10.857,245.571 146.338,10.821 147.826,8.229L424.747,8.229Z" style="fill-rule:nonzero;"/>
+            <path id="polygon2586" d="M171.179,48.717L56.086,248.153L171.179,447.569L401.373,447.569L516.485,248.153L401.373,48.717L171.179,48.717Z" style="fill:white;fill-rule:nonzero;"/>
+            <path id="path2588" d="M397.323,55.74C399.297,59.159 506.404,244.744 508.367,248.153C506.404,251.572 399.297,437.126 397.323,440.545L175.227,440.545C173.264,437.126 66.156,251.572 64.183,248.153C66.156,244.745 173.264,59.159 175.227,55.74L397.323,55.74Z" style="fill:rgb(250,166,26);fill-rule:nonzero;"/>
+            <path id="polygon2590" d="M253.932,156.937L318.402,156.937L352.88,70.454L446.21,260.006L345.288,319.644L312.938,425.832L259.633,425.832L227.387,319.479L126.362,260.006L219.537,70.454L253.932,156.937Z" style="fill-rule:nonzero;"/>
+            <path id="polygon2592" d="M352.957,227.005L352.957,278.019L305.281,278.019L352.957,227.005Z" style="fill:white;fill-rule:nonzero;"/>
+            <path id="polygon2594" d="M219.615,278.019L219.615,227.005L267.208,278.019L219.615,278.019Z" style="fill:white;fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>
