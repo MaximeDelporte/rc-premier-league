@@ -11,7 +11,19 @@ import SwiftUI
 struct rc_premier_leagueApp: App {
     var body: some Scene {
         WindowGroup {
-            TeamListView()
+            TabView(content: {
+                TeamListView()
+                    .tabItem {
+                        Label("Home", systemImage: "house.circle")
+                    }
+                
+                AccountView()
+                    .tabItem {
+                        Label("Account", systemImage: "person.crop.circle")
+                    }
+            })
+            
+            .tint(.primary)
         }
     }
 }
