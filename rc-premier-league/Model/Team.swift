@@ -9,18 +9,21 @@ import Foundation
 
 struct Team: Hashable {
     let name: String
-    let imageName: String
+    let logoImageName: String
+    let stadiumImageName: String
     let description: String
     let logoIsRound: Bool
     
     init(
         name: String,
-        imageName: String,
+        logoImageName: String,
+        stadiumImageName: String,
         description: String,
         logoIsRound: Bool = true
     ) {
         self.name = name
-        self.imageName = imageName
+        self.logoImageName = logoImageName
+        self.stadiumImageName = stadiumImageName
         self.description = description
         self.logoIsRound = logoIsRound
     }

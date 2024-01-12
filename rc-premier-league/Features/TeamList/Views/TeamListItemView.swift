@@ -21,7 +21,7 @@ struct TeamListItemView: View {
         
         HStack {
             ZStack {
-                Image(team.imageName)
+                Image(team.logoImageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(.top, team.logoIsRound ? 4 : 9)

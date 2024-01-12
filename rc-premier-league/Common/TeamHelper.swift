@@ -13,108 +13,128 @@ struct TeamHelper {
         [
             Team(
                 name: "Liverpool",
-                imageName: "liverpool",
+                logoImageName: "liverpool",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "Aston Villa",
-                imageName: "aston-villa",
+                logoImageName: "aston-villa",
+                stadiumImageName: "",
                 description: "",
                 logoIsRound: false
             ),
             Team(
                 name: "Manchester City",
-                imageName: "manchester-city",
+                logoImageName: "manchester-city",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "Arsenal",
-                imageName: "arsenal",
+                logoImageName: "arsenal",
+                stadiumImageName: "",
                 description: "",
                 logoIsRound: false
             ),
             Team(
                 name: "Tottenham",
-                imageName: "tottenham",
+                logoImageName: "tottenham",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "West Ham",
-                imageName: "west-ham",
+                logoImageName: "west-ham",
+                stadiumImageName: "",
                 description: "",
                 logoIsRound: false
             ),
             Team(
                 name: "Brighton",
-                imageName: "brighton",
+                logoImageName: "brighton",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "Manchester United",
-                imageName: "manchester-united",
+                logoImageName: "manchester-united",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "Newcastle",
-                imageName: "newcastle",
+                logoImageName: "newcastle",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "Chelsea",
-                imageName: "chelsea",
+                logoImageName: "chelsea",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "Wolverhampton",
-                imageName: "wolverhampton",
+                logoImageName: "wolverhampton",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "Bournemouth",
-                imageName: "bournemouth",
+                logoImageName: "bournemouth",
+                stadiumImageName: "",
                 description: "",
                 logoIsRound: false
             ),
             Team(
                 name: "Fulham",
-                imageName: "fulham",
+                logoImageName: "fulham",
+                stadiumImageName: "",
                 description: "",
                 logoIsRound: false
             ),
             Team(
                 name: "Crystal Palace",
-                imageName: "crystal-palace",
+                logoImageName: "crystal-palace",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "Nottingham Forest",
-                imageName: "nottingham-forest",
+                logoImageName: "nottingham-forest",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "Brentford",
-                imageName: "brentford",
+                logoImageName: "brentford",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "Everton",
-                imageName: "everton",
+                logoImageName: "everton",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "Luton",
-                imageName: "luton",
+                logoImageName: "luton",
+                stadiumImageName: "",
                 description: ""
             ),
             Team(
                 name: "Burnley",
-                imageName: "burnley",
+                logoImageName: "burnley",
+                stadiumImageName: "",
                 description: "",
                 logoIsRound: false
             ),
             Team(
                 name: "Sheffield",
-                imageName: "sheffield",
+                logoImageName: "sheffield",
+                stadiumImageName: "",
                 description: ""
             ),
         ]
