@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0BC7462B51955F00A3DEC2 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC7452B51955F00A3DEC2 /* Team.swift */; };
+		FC0BC7482B51959B00A3DEC2 /* TeamHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC7472B51959B00A3DEC2 /* TeamHelper.swift */; };
+		FC0BC74F2B51A42A00A3DEC2 /* TeamListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC74E2B51A42A00A3DEC2 /* TeamListItemView.swift */; };
 		FC3A6F6A2B519475000BAEF4 /* rc_premier_leagueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6F692B519475000BAEF4 /* rc_premier_leagueApp.swift */; };
-		FC3A6F6C2B519475000BAEF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6F6B2B519475000BAEF4 /* ContentView.swift */; };
+		FC3A6F6C2B519475000BAEF4 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6F6B2B519475000BAEF4 /* TeamListView.swift */; };
 		FC3A6F6E2B519476000BAEF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3A6F6D2B519476000BAEF4 /* Assets.xcassets */; };
 		FC3A6F722B519476000BAEF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3A6F712B519476000BAEF4 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC0BC7452B51955F00A3DEC2 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		FC0BC7472B51959B00A3DEC2 /* TeamHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamHelper.swift; sourceTree = "<group>"; };
+		FC0BC74E2B51A42A00A3DEC2 /* TeamListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListItemView.swift; sourceTree = "<group>"; };
 		FC3A6F662B519475000BAEF4 /* rc-premier-league.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rc-premier-league.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3A6F692B519475000BAEF4 /* rc_premier_leagueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rc_premier_leagueApp.swift; sourceTree = "<group>"; };
-		FC3A6F6B2B519475000BAEF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FC3A6F6B2B519475000BAEF4 /* TeamListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListView.swift; sourceTree = "<group>"; };
 		FC3A6F6D2B519476000BAEF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3A6F6F2B519476000BAEF4 /* rc_premier_league.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rc_premier_league.entitlements; sourceTree = "<group>"; };
 		FC3A6F712B519476000BAEF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -33,6 +39,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC0BC7442B51955800A3DEC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC0BC7452B51955F00A3DEC2 /* Team.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC0BC7492B51959D00A3DEC2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FC0BC7472B51959B00A3DEC2 /* TeamHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FC0BC74A2B51A2F500A3DEC2 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				FC0BC74C2B51A40500A3DEC2 /* TeamList */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FC0BC74B2B51A30700A3DEC2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC3A6F6D2B519476000BAEF4 /* Assets.xcassets */,
+				FC3A6F6F2B519476000BAEF4 /* rc_premier_league.entitlements */,
+				FC3A6F702B519476000BAEF4 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FC0BC74C2B51A40500A3DEC2 /* TeamList */ = {
+			isa = PBXGroup;
+			children = (
+				FC3A6F6B2B519475000BAEF4 /* TeamListView.swift */,
+				FC0BC74D2B51A40B00A3DEC2 /* Views */,
+			);
+			path = TeamList;
+			sourceTree = "<group>";
+		};
+		FC0BC74D2B51A40B00A3DEC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC0BC74E2B51A42A00A3DEC2 /* TeamListItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FC3A6F5D2B519475000BAEF4 = {
 			isa = PBXGroup;
 			children = (
@@ -53,10 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				FC3A6F692B519475000BAEF4 /* rc_premier_leagueApp.swift */,
-				FC3A6F6B2B519475000BAEF4 /* ContentView.swift */,
-				FC3A6F6D2B519476000BAEF4 /* Assets.xcassets */,
-				FC3A6F6F2B519476000BAEF4 /* rc_premier_league.entitlements */,
-				FC3A6F702B519476000BAEF4 /* Preview Content */,
+				FC0BC7492B51959D00A3DEC2 /* Helpers */,
+				FC0BC7442B51955800A3DEC2 /* Model */,
+				FC0BC74A2B51A2F500A3DEC2 /* Features */,
+				FC0BC74B2B51A30700A3DEC2 /* Resources */,
 			);
 			path = "rc-premier-league";
 			sourceTree = "<group>";
@@ -139,7 +196,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC3A6F6C2B519475000BAEF4 /* ContentView.swift in Sources */,
+				FC0BC7462B51955F00A3DEC2 /* Team.swift in Sources */,
+				FC0BC74F2B51A42A00A3DEC2 /* TeamListItemView.swift in Sources */,
+				FC3A6F6C2B519475000BAEF4 /* TeamListView.swift in Sources */,
+				FC0BC7482B51959B00A3DEC2 /* TeamHelper.swift in Sources */,
 				FC3A6F6A2B519475000BAEF4 /* rc_premier_leagueApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,10 +326,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "rc-premier-league/rc_premier_league.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "rc-premier-league/Resources/rc_premier_league.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"rc-premier-league/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"rc-premier-league/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4CQPKLYWJD;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -304,10 +365,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "rc-premier-league/rc_premier_league.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "rc-premier-league/Resources/rc_premier_league.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"rc-premier-league/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"rc-premier-league/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4CQPKLYWJD;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;

@@ -11,7 +11,7 @@ import SwiftUI
 struct rc_premier_leagueApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TeamListView()
         }
     }
 }
