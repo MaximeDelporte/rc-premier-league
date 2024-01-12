@@ -34,10 +34,8 @@ struct TeamListItemView: View {
                     .stroke(foregroundColor, lineWidth: 1)
             )
             
-            Text(rankText)
-                .font(.subheadline)
+            rankText
                 .fontWeight(.medium)
-                .fontWeight(.bold)
                 .frame(width: 34)
                 .padding(.leading, 6)
             
@@ -49,7 +47,7 @@ struct TeamListItemView: View {
             
             Spacer()
         }
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     
     private func getForegroundColor(for rank: Int) -> Color? {
@@ -61,12 +59,13 @@ struct TeamListItemView: View {
         }
     }
     
-    private func getRankText(for rank: Int) -> String {
+    private func getRankText(for rank: Int) -> Text {
+        let font = Font.system(size: 30)
         switch rank {
-        case 1: return "🥇"
-        case 2: return "🥈"
-        case 3: return "🥉"
-        default: return "\(rank)"
+        case 1: return Text("🥇").font(font)
+        case 2: return Text("🥈").font(font)
+        case 3: return Text("🥉").font(font)
+        default: return Text("\(rank)").font(.subheadline)
         }
     }
 }
