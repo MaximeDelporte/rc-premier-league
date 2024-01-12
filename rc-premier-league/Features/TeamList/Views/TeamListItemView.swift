@@ -17,6 +17,7 @@ struct TeamListItemView: View {
     
     var body: some View {
         let foregroundColor = getForegroundColor(for: rank) ?? .primary
+        let rankText = getRankText(for: rank)
         
         HStack {
             ZStack {
@@ -33,20 +34,18 @@ struct TeamListItemView: View {
                     .stroke(foregroundColor, lineWidth: 1)
             )
             
-            Text("\(rank)")
+            Text(rankText)
                 .font(.subheadline)
                 .fontWeight(.medium)
                 .fontWeight(.bold)
                 .frame(width: 34)
                 .padding(.leading, 6)
-                .foregroundColor(foregroundColor)
             
             Text(team.name)
                 .font(.subheadline)
                 .fontWeight(.medium)
                 .multilineTextAlignment(.leading)
                 .padding(.leading, 8)
-                .foregroundColor(foregroundColor)
             
             Spacer()
         }
@@ -59,6 +58,15 @@ struct TeamListItemView: View {
         case 2: return Color(.silver)
         case 3: return Color(.bronze)
         default: return nil
+        }
+    }
+    
+    private func getRankText(for rank: Int) -> String {
+        switch rank {
+        case 1: return "🥇"
+        case 2: return "🥈"
+        case 3: return "🥉"
+        default: return "\(rank)"
         }
     }
 }

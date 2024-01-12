@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TeamListView: View {
     
-    @State private var showTabBar = true
     private let teams = TeamHelper.allTeams
     
     var body: some View {
