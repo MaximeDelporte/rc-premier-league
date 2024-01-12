@@ -18,19 +18,31 @@ struct rc_premier_leagueApp: App {
 
 private struct RCTabView: View {
     
+    @State var tabSelection: Int = 0
+    
+    private let views = [AnyView(TeamListView()), AnyView(AccountView())]
+    private let navTitles = ["Premier League", "Account"]
+    private let titles = ["Home", "Account"]
+    private let imageNames = ["house.circle", "person.crop.circle"]
+    
     var body: some View {
-        TabView(content: {
-            TeamListView()
-                .tabItem {
-                    Label("Home", systemImage: "house.circle")
+        NavigationView {
+            TabView(selection: $tabSelection) {
+                ForEach(0...1, id: \.self) { index in
+                    views[index]
+                        .tabItem {
+                            Label(titles[index], systemImage: imageNames[index])
+                        }
                 }
-            
-            AccountView()
-                .tabItem {
-                    Label("Account", systemImage: "person.crop.circle")
-                }
-        })
-        .tint(.primary)
+            }
+            .tint(.primary)
+            .navigationTitle(navTitles[tabSelection])
+        }
+        .onAppear() {
+            let backgroundColor = UIColor.systemGray6
+            UITabBar.appearance().barTintColor = backgroundColor
+            UITabBar.appearance().backgroundColor = backgroundColor
+        }
     }
 }
 

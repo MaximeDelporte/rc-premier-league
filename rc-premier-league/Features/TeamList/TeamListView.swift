@@ -9,32 +9,32 @@ import SwiftUI
 
 struct TeamListView: View {
     
+    @State private var showTabBar = true
     private let teams = TeamHelper.allTeams
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 0, content: {
-                InvitationToUpgradeView()
-                    .padding(.top, 16)
-                    .padding(.horizontal, 16)
+        VStack(spacing: 0, content: {
+            InvitationToUpgradeView()
+                .padding(.top, 16)
+                .padding(.horizontal, 16)
+            
+            ScrollView {
+                Spacer(minLength: 24)
                 
-                ScrollView {
-                    Spacer(minLength: 24)
+                ForEach(Array(teams.enumerated()), id: \.element) { (index, team) in
+                    let rank = index + 1
                     
-                    ForEach(Array(teams.enumerated()), id: \.element) { (index, team) in
-                        let rank = index + 1
-                        
-                        NavigationLink(destination: TeamDetailView()) {
-                            TeamListItemView(rank: rank, team: team)
-                                .padding(.horizontal, 16)
-                        }
-                        .buttonStyle(NoTapAnimationStyle())
+                    NavigationLink(destination: TeamDetailView()) {
+                        TeamListItemView(rank: rank, team: team)
+                            .padding(.horizontal, 16)
                     }
+                    .buttonStyle(NoTapAnimationStyle())
                 }
-                .scrollIndicators(.hidden)
-            })
-            .navigationTitle("Premier League")
-        }
+                
+                Spacer(minLength: 24)
+            }
+            .scrollIndicators(.hidden)
+        })
     }
 }
 
