@@ -16,17 +16,13 @@ struct InvitationToUpgradeView: View {
     var body: some View {
         VStack(alignment: .leading, content: {
             Text("Sign up for our monthly plan to access all team informations !")
-                .padding(.horizontal, padding)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .padding(.top, padding)
+                .padding(.horizontal, padding)
                 .padding(.bottom, 8)
             
-            Button(action: {}, label: {
-                Text("Let's do it")
-                    .padding(.vertical, padding)
-                    .padding(.horizontal, padding)
-                    .background(.blue)
-                    .foregroundStyle(.white)
-                    .cornerRadius(8)
+            RCButton(title: "Let's do it", action: {
+                print("Hello")
             })
             .padding(.leading, padding)
             .padding(.bottom, padding)
@@ -38,6 +34,11 @@ struct InvitationToUpgradeView: View {
             RoundedRectangle(cornerSize: CGSize(width: cardCornerRadius, height: cardCornerRadius))
                 .stroke(.primary, lineWidth: 1.5)
         }
-        .padding(.top, 8)
+        .frame(maxWidth: .infinity, alignment: .center)
+       
     }
+}
+
+#Preview {
+    InvitationToUpgradeView()
 }

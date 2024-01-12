@@ -22,8 +22,8 @@ struct TeamListItemView: View {
             ZStack {
                 Image(team.imageName)
                     .resizable()
-                    .padding(.vertical, 6)
-                    .padding(.horizontal, 6)
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 8)
             }
             .background(.white)
             .frame(width: imageSize, height: imageSize)
@@ -32,7 +32,6 @@ struct TeamListItemView: View {
                 Circle()
                     .stroke(foregroundColor, lineWidth: 1)
             )
-            .padding(.leading, 8)
             
             Text("\(rank)")
                 .font(.subheadline)

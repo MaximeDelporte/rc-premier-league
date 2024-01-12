@@ -15,22 +15,24 @@ struct TeamListView: View {
         NavigationView {
             VStack(spacing: 0, content: {
                 InvitationToUpgradeView()
+                    .padding(.top, 16)
+                    .padding(.horizontal, 16)
                 
                 ScrollView {
-                    Spacer(minLength: 16)
+                    Spacer(minLength: 24)
                     
                     ForEach(Array(teams.enumerated()), id: \.element) { (index, team) in
                         let rank = index + 1
                         
                         NavigationLink(destination: TeamDetailView()) {
                             TeamListItemView(rank: rank, team: team)
+                                .padding(.horizontal, 16)
                         }
                         .buttonStyle(NoTapAnimationStyle())
                     }
                 }
                 .scrollIndicators(.hidden)
             })
-            .padding(.horizontal, 16)
             .navigationTitle("Premier League")
         }
     }

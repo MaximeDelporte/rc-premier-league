@@ -14,6 +14,7 @@
 		FC0BC7542B51B69600A3DEC2 /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC7532B51B69600A3DEC2 /* TeamDetailView.swift */; };
 		FC0BC7582B51B98B00A3DEC2 /* NoTapAnimationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC7572B51B98B00A3DEC2 /* NoTapAnimationStyle.swift */; };
 		FC0BC75B2B51C0BC00A3DEC2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC75A2B51C0BC00A3DEC2 /* AccountView.swift */; };
+		FC0BC7602B51D72600A3DEC2 /* RCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC75F2B51D72600A3DEC2 /* RCButton.swift */; };
 		FC3A6F6A2B519475000BAEF4 /* rc_premier_leagueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6F692B519475000BAEF4 /* rc_premier_leagueApp.swift */; };
 		FC3A6F6C2B519475000BAEF4 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6F6B2B519475000BAEF4 /* TeamListView.swift */; };
 		FC3A6F6E2B519476000BAEF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3A6F6D2B519476000BAEF4 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		FC0BC7532B51B69600A3DEC2 /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
 		FC0BC7572B51B98B00A3DEC2 /* NoTapAnimationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTapAnimationStyle.swift; sourceTree = "<group>"; };
 		FC0BC75A2B51C0BC00A3DEC2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		FC0BC75F2B51D72600A3DEC2 /* RCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCButton.swift; sourceTree = "<group>"; };
 		FC3A6F662B519475000BAEF4 /* rc-premier-league.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rc-premier-league.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3A6F692B519475000BAEF4 /* rc_premier_leagueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rc_premier_leagueApp.swift; sourceTree = "<group>"; };
 		FC3A6F6B2B519475000BAEF4 /* TeamListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListView.swift; sourceTree = "<group>"; };
@@ -58,8 +60,9 @@
 		FC0BC7492B51959D00A3DEC2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				FC0BC7472B51959B00A3DEC2 /* TeamHelper.swift */,
 				FC0BC7572B51B98B00A3DEC2 /* NoTapAnimationStyle.swift */,
+				FC0BC7472B51959B00A3DEC2 /* TeamHelper.swift */,
+				FC0BC75F2B51D72600A3DEC2 /* RCButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -67,9 +70,9 @@
 		FC0BC74A2B51A2F500A3DEC2 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				FC0BC7592B51C0B400A3DEC2 /* Account */,
 				FC0BC74C2B51A40500A3DEC2 /* TeamList */,
 				FC0BC7522B51B68700A3DEC2 /* TeamDetail */,
+				FC0BC7592B51C0B400A3DEC2 /* Account */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				FC0BC74F2B51A42A00A3DEC2 /* TeamListItemView.swift in Sources */,
 				FC3A6F6C2B519475000BAEF4 /* TeamListView.swift in Sources */,
 				FC0BC7482B51959B00A3DEC2 /* TeamHelper.swift in Sources */,
+				FC0BC7602B51D72600A3DEC2 /* RCButton.swift in Sources */,
 				FC3A6F6A2B519475000BAEF4 /* rc_premier_leagueApp.swift in Sources */,
 				FC0BC75B2B51C0BC00A3DEC2 /* AccountView.swift in Sources */,
 				FC0BC7542B51B69600A3DEC2 /* TeamDetailView.swift in Sources */,
@@ -387,7 +391,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.maximedelporte.rc-premier-league";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -428,7 +433,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.maximedelporte.rc-premier-league";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
