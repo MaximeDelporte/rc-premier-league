@@ -12,18 +12,20 @@ struct TeamListView: View {
     private let teams = TeamHelper.allTeams
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack(spacing: 0, content: {
                 InvitationToUpgradeView()
                 
                 ScrollView {
-                    VStack(alignment: .leading, content: {
-                        ForEach(Array(teams.enumerated()), id: \.element) { (index, team) in
-                            let rank = index + 1
+                    Spacer(minLength: 16)
+                    
+                    ForEach(Array(teams.enumerated()), id: \.element) { (index, team) in
+                        let rank = index + 1
+                        
+                        NavigationLink(destination: TeamDetailView()) {
                             TeamListItemView(rank: rank, team: team)
                         }
-                    })
-                    .padding(.top, 24)
+                    }
                 }
                 .scrollIndicators(.hidden)
             })
