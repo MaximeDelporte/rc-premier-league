@@ -32,7 +32,7 @@ struct TeamListItemView: View {
                 Circle()
                     .stroke(foregroundColor, lineWidth: 1)
             )
-            .padding(.leading, 16)
+            .padding(.leading, 8)
             
             Text("\(rank)")
                 .font(.subheadline)

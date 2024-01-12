@@ -25,13 +25,14 @@ struct TeamListView: View {
                         NavigationLink(destination: TeamDetailView()) {
                             TeamListItemView(rank: rank, team: team)
                         }
+                        .buttonStyle(NoTapAnimationStyle())
                     }
                 }
                 .scrollIndicators(.hidden)
             })
+            .padding(.horizontal, 16)
             .navigationTitle("Premier League")
         }
-        .padding(.horizontal, 8)
     }
 }
 
