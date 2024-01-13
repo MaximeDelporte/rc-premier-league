@@ -15,7 +15,7 @@
 		FC0BC7582B51B98B00A3DEC2 /* NoTapAnimationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC7572B51B98B00A3DEC2 /* NoTapAnimationStyle.swift */; };
 		FC0BC75B2B51C0BC00A3DEC2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC75A2B51C0BC00A3DEC2 /* AccountView.swift */; };
 		FC0BC7602B51D72600A3DEC2 /* RCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC75F2B51D72600A3DEC2 /* RCButton.swift */; };
-		FC3A6F6A2B519475000BAEF4 /* rc_premier_leagueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6F692B519475000BAEF4 /* rc_premier_leagueApp.swift */; };
+		FC3A6F6A2B519475000BAEF4 /* RCPremierLeagueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6F692B519475000BAEF4 /* RCPremierLeagueApp.swift */; };
 		FC3A6F6C2B519475000BAEF4 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6F6B2B519475000BAEF4 /* TeamListView.swift */; };
 		FC3A6F6E2B519476000BAEF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3A6F6D2B519476000BAEF4 /* Assets.xcassets */; };
 		FC3A6F722B519476000BAEF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3A6F712B519476000BAEF4 /* Preview Assets.xcassets */; };
@@ -31,7 +31,7 @@
 		FC0BC75A2B51C0BC00A3DEC2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		FC0BC75F2B51D72600A3DEC2 /* RCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCButton.swift; sourceTree = "<group>"; };
 		FC3A6F662B519475000BAEF4 /* rc-premier-league.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rc-premier-league.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC3A6F692B519475000BAEF4 /* rc_premier_leagueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rc_premier_leagueApp.swift; sourceTree = "<group>"; };
+		FC3A6F692B519475000BAEF4 /* RCPremierLeagueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCPremierLeagueApp.swift; sourceTree = "<group>"; };
 		FC3A6F6B2B519475000BAEF4 /* TeamListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListView.swift; sourceTree = "<group>"; };
 		FC3A6F6D2B519476000BAEF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3A6F6F2B519476000BAEF4 /* rc_premier_league.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rc_premier_league.entitlements; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		FC3A6F682B519475000BAEF4 /* rc-premier-league */ = {
 			isa = PBXGroup;
 			children = (
-				FC3A6F692B519475000BAEF4 /* rc_premier_leagueApp.swift */,
+				FC3A6F692B519475000BAEF4 /* RCPremierLeagueApp.swift */,
 				FC0BC7492B51959D00A3DEC2 /* Common */,
 				FC0BC7442B51955800A3DEC2 /* Model */,
 				FC0BC74A2B51A2F500A3DEC2 /* Features */,
@@ -233,7 +233,7 @@
 				FC3A6F6C2B519475000BAEF4 /* TeamListView.swift in Sources */,
 				FC0BC7482B51959B00A3DEC2 /* TeamHelper.swift in Sources */,
 				FC0BC7602B51D72600A3DEC2 /* RCButton.swift in Sources */,
-				FC3A6F6A2B519475000BAEF4 /* rc_premier_leagueApp.swift in Sources */,
+				FC3A6F6A2B519475000BAEF4 /* RCPremierLeagueApp.swift in Sources */,
 				FC0BC75B2B51C0BC00A3DEC2 /* AccountView.swift in Sources */,
 				FC0BC7542B51B69600A3DEC2 /* TeamDetailView.swift in Sources */,
 				FC0BC7582B51B98B00A3DEC2 /* NoTapAnimationStyle.swift in Sources */,
