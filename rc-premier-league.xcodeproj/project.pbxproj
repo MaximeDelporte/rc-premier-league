@@ -19,6 +19,10 @@
 		FC3A6F6C2B519475000BAEF4 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6F6B2B519475000BAEF4 /* TeamListView.swift */; };
 		FC3A6F6E2B519476000BAEF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3A6F6D2B519476000BAEF4 /* Assets.xcassets */; };
 		FC3A6F722B519476000BAEF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3A6F712B519476000BAEF4 /* Preview Assets.xcassets */; };
+		FCE279DA2B52237F00554456 /* ReceiptParser in Frameworks */ = {isa = PBXBuildFile; productRef = FCE279D92B52237F00554456 /* ReceiptParser */; };
+		FCE279DC2B52237F00554456 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = FCE279DB2B52237F00554456 /* RevenueCat */; };
+		FCE279DE2B52237F00554456 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = FCE279DD2B52237F00554456 /* RevenueCatUI */; };
+		FCE279E32B52245600554456 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE279E22B52245600554456 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,7 @@
 		FC3A6F6D2B519476000BAEF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3A6F6F2B519476000BAEF4 /* rc_premier_league.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rc_premier_league.entitlements; sourceTree = "<group>"; };
 		FC3A6F712B519476000BAEF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FCE279E22B52245600554456 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +48,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE279DC2B52237F00554456 /* RevenueCat in Frameworks */,
+				FCE279DA2B52237F00554456 /* ReceiptParser in Frameworks */,
+				FCE279E32B52245600554456 /* StoreKit.framework in Frameworks */,
+				FCE279DE2B52237F00554456 /* RevenueCatUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +135,7 @@
 			children = (
 				FC3A6F682B519475000BAEF4 /* rc-premier-league */,
 				FC3A6F672B519475000BAEF4 /* Products */,
+				FCE279E12B52245600554456 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +167,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		FCE279E12B52245600554456 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCE279E22B52245600554456 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,6 +191,11 @@
 			dependencies = (
 			);
 			name = "rc-premier-league";
+			packageProductDependencies = (
+				FCE279D92B52237F00554456 /* ReceiptParser */,
+				FCE279DB2B52237F00554456 /* RevenueCat */,
+				FCE279DD2B52237F00554456 /* RevenueCatUI */,
+			);
 			productName = "rc-premier-league";
 			productReference = FC3A6F662B519475000BAEF4 /* rc-premier-league.app */;
 			productType = "com.apple.product-type.application";
@@ -201,6 +224,9 @@
 				Base,
 			);
 			mainGroup = FC3A6F5D2B519475000BAEF4;
+			packageReferences = (
+				FCE279D82B52237F00554456 /* XCRemoteSwiftPackageReference "purchases-ios" */,
+			);
 			productRefGroup = FC3A6F672B519475000BAEF4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -366,13 +392,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"rc-premier-league/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = RP68K7NXAW;
+				DONT_GENERATE_INFOPLIST_FILE = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_CFBundleDisplayName = "RC Premier League";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -412,13 +441,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"rc-premier-league/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = RP68K7NXAW;
+				DONT_GENERATE_INFOPLIST_FILE = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_CFBundleDisplayName = "RC Premier League";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -471,6 +503,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FCE279D82B52237F00554456 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.31.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FCE279D92B52237F00554456 /* ReceiptParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCE279D82B52237F00554456 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = ReceiptParser;
+		};
+		FCE279DB2B52237F00554456 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCE279D82B52237F00554456 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
+		FCE279DD2B52237F00554456 /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCE279D82B52237F00554456 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCatUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FC3A6F5E2B519475000BAEF4 /* Project object */;
 }

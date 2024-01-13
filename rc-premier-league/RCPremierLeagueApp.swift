@@ -5,6 +5,7 @@
 //  Created by afx on 12/01/2024.
 //
 
+import RevenueCat
 import SwiftUI
 
 @main
@@ -13,6 +14,19 @@ struct RCPremierLeagueApp: App {
         WindowGroup {
            RCTabView()
         }
+    }
+    
+    init() {
+        guard let apiKey = ProcessInfo.processInfo.environment["API_KEY"],
+              let appUserID = ProcessInfo.processInfo.environment["APP_USER_ID"] else {
+            return
+        }
+        
+        Purchases.configure(
+          with: Configuration.Builder(withAPIKey: apiKey)
+            .with(appUserID: appUserID)
+            .build()
+        )
     }
 }
 

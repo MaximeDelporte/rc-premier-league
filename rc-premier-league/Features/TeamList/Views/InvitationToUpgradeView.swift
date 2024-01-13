@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RevenueCat
 import SwiftUI
 
 struct InvitationToUpgradeView: View {
@@ -22,7 +23,11 @@ struct InvitationToUpgradeView: View {
                 .padding(.bottom, 8)
             
             RCButton(title: "Let's do it", action: {
-                print("Hello")
+                Purchases.shared.getOfferings { (offerings, error) in
+                    if let packages = offerings?.current?.availablePackages {
+                        print(packages)
+                    }
+                }
             })
             .padding(.leading, padding)
             .padding(.bottom, padding)
