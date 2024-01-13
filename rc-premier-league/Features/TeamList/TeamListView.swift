@@ -9,11 +9,13 @@ import SwiftUI
 
 struct TeamListView: View {
     
+    @State var isPaywallPresented = false
+    
     private let teams = TeamHelper.allTeams
     
     var body: some View {
         VStack(spacing: 0, content: {
-            InvitationToUpgradeView()
+            InvitationToUpgradeView(isPaywallPresented: $isPaywallPresented)
                 .padding(.top, 16)
                 .padding(.horizontal, 16)
             
@@ -34,6 +36,9 @@ struct TeamListView: View {
             }
             .scrollIndicators(.hidden)
         })
+        .sheet(isPresented: $isPaywallPresented, onDismiss: nil) {
+            PaywallView(isPaywallPresented: $isPaywallPresented)
+        }
     }
 }
 

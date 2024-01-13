@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct AccountView: View {
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0, content: {
             HStack(spacing: 8, content: {
@@ -21,9 +22,14 @@ struct AccountView: View {
             })
             .padding(.vertical, 32)
             
-            RCButton(title: "Restore Purchases", action: {
-                
-            })
+//            Button(action: {}, label: {
+//                Text("Restore Purchases")
+//                    .padding(.vertical, padding)
+//                    .padding(.horizontal, padding)
+//                    .background(.blue)
+//                    .foregroundStyle(.white)
+//                    .cornerRadius(8)
+//            })
             
             Spacer()
         })

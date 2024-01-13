@@ -14,11 +14,12 @@
 		FC0BC7542B51B69600A3DEC2 /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC7532B51B69600A3DEC2 /* TeamDetailView.swift */; };
 		FC0BC7582B51B98B00A3DEC2 /* NoTapAnimationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC7572B51B98B00A3DEC2 /* NoTapAnimationStyle.swift */; };
 		FC0BC75B2B51C0BC00A3DEC2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC75A2B51C0BC00A3DEC2 /* AccountView.swift */; };
-		FC0BC7602B51D72600A3DEC2 /* RCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0BC75F2B51D72600A3DEC2 /* RCButton.swift */; };
 		FC3A6F6A2B519475000BAEF4 /* RCPremierLeagueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6F692B519475000BAEF4 /* RCPremierLeagueApp.swift */; };
 		FC3A6F6C2B519475000BAEF4 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3A6F6B2B519475000BAEF4 /* TeamListView.swift */; };
 		FC3A6F6E2B519476000BAEF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3A6F6D2B519476000BAEF4 /* Assets.xcassets */; };
 		FC3A6F722B519476000BAEF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3A6F712B519476000BAEF4 /* Preview Assets.xcassets */; };
+		FC5931F72B530BEB0025387E /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5931F62B530BEB0025387E /* PaywallView.swift */; };
+		FC5931FC2B5338DE0025387E /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5931FB2B5338DE0025387E /* View+.swift */; };
 		FCE279DA2B52237F00554456 /* ReceiptParser in Frameworks */ = {isa = PBXBuildFile; productRef = FCE279D92B52237F00554456 /* ReceiptParser */; };
 		FCE279DC2B52237F00554456 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = FCE279DB2B52237F00554456 /* RevenueCat */; };
 		FCE279DE2B52237F00554456 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = FCE279DD2B52237F00554456 /* RevenueCatUI */; };
@@ -33,7 +34,6 @@
 		FC0BC7532B51B69600A3DEC2 /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
 		FC0BC7572B51B98B00A3DEC2 /* NoTapAnimationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTapAnimationStyle.swift; sourceTree = "<group>"; };
 		FC0BC75A2B51C0BC00A3DEC2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		FC0BC75F2B51D72600A3DEC2 /* RCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCButton.swift; sourceTree = "<group>"; };
 		FC3A6F662B519475000BAEF4 /* rc-premier-league.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rc-premier-league.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3A6F692B519475000BAEF4 /* RCPremierLeagueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCPremierLeagueApp.swift; sourceTree = "<group>"; };
 		FC3A6F6B2B519475000BAEF4 /* TeamListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListView.swift; sourceTree = "<group>"; };
@@ -42,6 +42,8 @@
 		FC3A6F712B519476000BAEF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FC5931F32B5302590025387E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC5931F42B53064B0025387E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		FC5931F62B530BEB0025387E /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		FC5931FB2B5338DE0025387E /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		FCE279E22B52245600554456 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -72,8 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				FC0BC7572B51B98B00A3DEC2 /* NoTapAnimationStyle.swift */,
-				FC0BC7472B51959B00A3DEC2 /* TeamHelper.swift */,
-				FC0BC75F2B51D72600A3DEC2 /* RCButton.swift */,
+				FC5931FA2B5338A60025387E /* Helper */,
+				FC5931F82B53389B0025387E /* Extension */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -82,8 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				FC0BC74C2B51A40500A3DEC2 /* TeamList */,
-				FC0BC7522B51B68700A3DEC2 /* TeamDetail */,
-				FC0BC7592B51C0B400A3DEC2 /* Account */,
+				FC0BC7532B51B69600A3DEC2 /* TeamDetailView.swift */,
+				FC0BC75A2B51C0BC00A3DEC2 /* AccountView.swift */,
+				FC5931F62B530BEB0025387E /* PaywallView.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -112,26 +115,10 @@
 		FC0BC74D2B51A40B00A3DEC2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FC0BC74E2B51A42A00A3DEC2 /* TeamListItemView.swift */,
 				FC0BC7502B51B41100A3DEC2 /* InvitationToUpgradeView.swift */,
+				FC0BC74E2B51A42A00A3DEC2 /* TeamListItemView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		FC0BC7522B51B68700A3DEC2 /* TeamDetail */ = {
-			isa = PBXGroup;
-			children = (
-				FC0BC7532B51B69600A3DEC2 /* TeamDetailView.swift */,
-			);
-			path = TeamDetail;
-			sourceTree = "<group>";
-		};
-		FC0BC7592B51C0B400A3DEC2 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				FC0BC75A2B51C0BC00A3DEC2 /* AccountView.swift */,
-			);
-			path = Account;
 			sourceTree = "<group>";
 		};
 		FC3A6F5D2B519475000BAEF4 = {
@@ -169,6 +156,22 @@
 				FC3A6F712B519476000BAEF4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FC5931F82B53389B0025387E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FC5931FB2B5338DE0025387E /* View+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FC5931FA2B5338A60025387E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FC0BC7472B51959B00A3DEC2 /* TeamHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		FCE279E12B52245600554456 /* Frameworks */ = {
@@ -261,8 +264,9 @@
 				FC0BC7512B51B41100A3DEC2 /* InvitationToUpgradeView.swift in Sources */,
 				FC0BC74F2B51A42A00A3DEC2 /* TeamListItemView.swift in Sources */,
 				FC3A6F6C2B519475000BAEF4 /* TeamListView.swift in Sources */,
+				FC5931FC2B5338DE0025387E /* View+.swift in Sources */,
 				FC0BC7482B51959B00A3DEC2 /* TeamHelper.swift in Sources */,
-				FC0BC7602B51D72600A3DEC2 /* RCButton.swift in Sources */,
+				FC5931F72B530BEB0025387E /* PaywallView.swift in Sources */,
 				FC3A6F6A2B519475000BAEF4 /* RCPremierLeagueApp.swift in Sources */,
 				FC0BC75B2B51C0BC00A3DEC2 /* AccountView.swift in Sources */,
 				FC0BC7542B51B69600A3DEC2 /* TeamDetailView.swift in Sources */,

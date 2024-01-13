@@ -11,6 +11,8 @@ import SwiftUI
 
 struct InvitationToUpgradeView: View {
     
+    @Binding var isPaywallPresented: Bool
+    
     private let padding: CGFloat = 16
     private let cardCornerRadius: CGFloat = 12
     
@@ -22,15 +24,19 @@ struct InvitationToUpgradeView: View {
                 .padding(.horizontal, padding)
                 .padding(.bottom, 8)
             
-            RCButton(title: "Let's do it", action: {
-                Purchases.shared.getOfferings { (offerings, error) in
-                    if let packages = offerings?.current?.availablePackages {
-                        print(packages)
-                    }
+            Button(
+                action: { isPaywallPresented = true },
+                label: {
+                    Text("Let's do it")
+                        .padding(.vertical, 14)
+                        .padding(.horizontal, 14)
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .cornerRadius(8)
                 }
-            })
-            .padding(.leading, padding)
-            .padding(.bottom, padding)
+            )
+            .padding(.horizontal, padding)
+            .padding(.bottom, 16)
         })
         .clipShape(
             RoundedRectangle(cornerSize: CGSize(width: cardCornerRadius, height: cardCornerRadius))
@@ -45,5 +51,6 @@ struct InvitationToUpgradeView: View {
 }
 
 #Preview {
-    InvitationToUpgradeView()
+    @State var isPaywallPresented = false
+    return InvitationToUpgradeView(isPaywallPresented: $isPaywallPresented)
 }
