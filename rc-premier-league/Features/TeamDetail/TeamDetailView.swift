@@ -13,23 +13,21 @@ struct TeamDetailView: View {
     var team: Team
     
     var body: some View {
-        VStack(spacing: 0, content: {
+        ScrollView {
             Image(team.stadiumImageName)
                 .resizable()
                 .frame(height: 200)
                 .aspectRatio(contentMode: .fit)
             
-            ScrollView {
-                Spacer()
-                    .frame(height: 16)
-                
-                Text(team.description)
-                    .padding(.horizontal, 16)
-                    .padding(.bottom, 16)
-            }
-            .scrollIndicators(.hidden)
-            .navigationTitle(team.name)
-        })
+            Spacer()
+                .frame(height: 16)
+            
+            Text(team.description)
+                .padding(.horizontal, 16)
+                .padding(.bottom, 16)
+        }
+        .scrollIndicators(.hidden)
+        .navigationTitle(team.name)
     }
 }
 
