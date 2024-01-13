@@ -17,8 +17,9 @@ struct RCPremierLeagueApp: App {
     }
     
     init() {
-        guard let apiKey = ProcessInfo.processInfo.environment["API_KEY"],
-              let appUserID = ProcessInfo.processInfo.environment["APP_USER_ID"] else {
+        guard let dictionary: [String: Any] = Bundle.main.infoDictionary,
+              let apiKey: String = dictionary["API_KEY"] as? String,
+              let appUserID = dictionary["APP_USER_ID"] as? String else {
             return
         }
         
