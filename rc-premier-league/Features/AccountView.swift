@@ -22,14 +22,14 @@ struct AccountView: View {
             })
             .padding(.vertical, 32)
             
-//            Button(action: {}, label: {
-//                Text("Restore Purchases")
-//                    .padding(.vertical, padding)
-//                    .padding(.horizontal, padding)
-//                    .background(.blue)
-//                    .foregroundStyle(.white)
-//                    .cornerRadius(8)
-//            })
+            Button(action: {}, label: {
+                Text("Restore Purchases")
+                    .padding(.vertical, 16)
+                    .padding(.horizontal, 16)
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .cornerRadius(8)
+            })
             
             Spacer()
         })

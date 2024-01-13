@@ -28,8 +28,8 @@ struct TeamListItemView: View {
                     .padding(.bottom, 4)
                     .padding(.horizontal, 4)
             }
-            .background(.white)
             .frame(width: imageSize, height: imageSize)
+            .background(.white)
             .clipShape(Circle())
             .overlay(
                 Circle()
