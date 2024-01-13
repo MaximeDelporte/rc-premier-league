@@ -23,7 +23,7 @@ struct TeamListView: View {
                 ForEach(Array(teams.enumerated()), id: \.element) { (index, team) in
                     let rank = index + 1
                     
-                    NavigationLink(destination: TeamDetailView()) {
+                    NavigationLink(destination: TeamDetailView(team: team)) {
                         TeamListItemView(rank: rank, team: team)
                             .padding(.horizontal, 16)
                     }
