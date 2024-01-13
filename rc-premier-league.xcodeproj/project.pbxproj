@@ -20,6 +20,7 @@
 		FC3A6F722B519476000BAEF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3A6F712B519476000BAEF4 /* Preview Assets.xcassets */; };
 		FC5931F72B530BEB0025387E /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5931F62B530BEB0025387E /* PaywallView.swift */; };
 		FC5931FC2B5338DE0025387E /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5931FB2B5338DE0025387E /* View+.swift */; };
+		FC5931FE2B5351AC0025387E /* SubscriptionPeriod+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5931FD2B5351AC0025387E /* SubscriptionPeriod+.swift */; };
 		FCE279DA2B52237F00554456 /* ReceiptParser in Frameworks */ = {isa = PBXBuildFile; productRef = FCE279D92B52237F00554456 /* ReceiptParser */; };
 		FCE279DC2B52237F00554456 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = FCE279DB2B52237F00554456 /* RevenueCat */; };
 		FCE279DE2B52237F00554456 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = FCE279DD2B52237F00554456 /* RevenueCatUI */; };
@@ -44,6 +45,7 @@
 		FC5931F42B53064B0025387E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		FC5931F62B530BEB0025387E /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		FC5931FB2B5338DE0025387E /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		FC5931FD2B5351AC0025387E /* SubscriptionPeriod+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubscriptionPeriod+.swift"; sourceTree = "<group>"; };
 		FCE279E22B52245600554456 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				FC5931FB2B5338DE0025387E /* View+.swift */,
+				FC5931FD2B5351AC0025387E /* SubscriptionPeriod+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				FC5931FC2B5338DE0025387E /* View+.swift in Sources */,
 				FC0BC7482B51959B00A3DEC2 /* TeamHelper.swift in Sources */,
 				FC5931F72B530BEB0025387E /* PaywallView.swift in Sources */,
+				FC5931FE2B5351AC0025387E /* SubscriptionPeriod+.swift in Sources */,
 				FC3A6F6A2B519475000BAEF4 /* RCPremierLeagueApp.swift in Sources */,
 				FC0BC75B2B51C0BC00A3DEC2 /* AccountView.swift in Sources */,
 				FC0BC7542B51B69600A3DEC2 /* TeamDetailView.swift in Sources */,

@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import RevenueCat
 import SwiftUI
 
 struct PaywallView: View {
     
     @Binding var isPaywallPresented: Bool
+    @State var currentOffering: Offering?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -38,31 +40,33 @@ struct PaywallView: View {
                 imageName: "support",
                 description: "24/7 premium support."
             )
-            .padding(.bottom, 16)
+            .padding(.bottom, 24)
             
-            Button(action: {}, label: {
-                Text("1 year 9.99$")
-                    .padding(.vertical, 16)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .background(.blue)
-                    .foregroundStyle(.white)
-                    .cornerRadius(8)
-            })
-            
-            Button(action: {}, label: {
-                Text("1 month 0.99$")
-                    .padding(.vertical, 16)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .background(.blue)
-                    .foregroundStyle(.white)
-                    .cornerRadius(8)
-            })
-            .padding(.bottom, 16)
-            
-            Text("Your full unlimited access is just around the corner.")
-                .frame(maxWidth: .infinity, alignment: .leading)
+            if let offering = currentOffering {
+                ForEach(offering.availablePackages) { package in
+                    if let subscriptionPeriod = package.storeProduct.subscriptionPeriod {
+                        
+                        let title = "\(subscriptionPeriod.periodTitle), \(package.localizedPriceString)"
+                        
+                        Button(action: {}, label: {
+                            Text(title)
+                                .padding(.vertical, 16)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .background(.blue)
+                                .foregroundStyle(.white)
+                                .cornerRadius(8)
+                        })
+                    }
+                }
+            }
         }
         .padding(.horizontal, 36)
+        .onAppear {
+            Purchases.shared.getOfferings(completion: { (offerings, error) in
+                guard let offering = offerings?.current else { return }
+                self.currentOffering = offering
+            })
+        }
     }
 }
 
