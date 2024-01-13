@@ -40,6 +40,7 @@
 		FC3A6F6D2B519476000BAEF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3A6F6F2B519476000BAEF4 /* rc_premier_league.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rc_premier_league.entitlements; sourceTree = "<group>"; };
 		FC3A6F712B519476000BAEF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FC5931F32B5302590025387E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCE279E22B52245600554456 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -89,6 +90,7 @@
 		FC0BC74B2B51A30700A3DEC2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FC5931F32B5302590025387E /* Info.plist */,
 				FC3A6F6D2B519476000BAEF4 /* Assets.xcassets */,
 				FC3A6F6F2B519476000BAEF4 /* rc_premier_league.entitlements */,
 				FC3A6F702B519476000BAEF4 /* Preview Content */,
@@ -401,7 +403,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "rc-premier-league/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "RC Premier League";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -450,7 +452,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "rc-premier-league/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "RC Premier League";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
