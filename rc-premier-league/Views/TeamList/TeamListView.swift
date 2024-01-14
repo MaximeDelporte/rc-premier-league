@@ -44,7 +44,6 @@ struct TeamListView: View {
                                 .padding(.horizontal, 16)
                         }
                     )
-                    .buttonStyle(NoTapAnimationStyle())
                 }
                 
                 Spacer(minLength: 24)
