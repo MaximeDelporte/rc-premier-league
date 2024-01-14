@@ -2,8 +2,8 @@
 
 ![RCPremierLeague App](/assets/RCPremierLeague.png "RCPremierLeague App")
 
-🇫🇷 RC Premier League (RevenueCat Premier League) est un exemple d'implémentation de l'API de [RevenueCat](https://www.revenuecat.com/).
-🇺🇸🇬🇧 RC Premier League (RevenueCat Premier League) is a sample implementation of the [RevenueCat](https://www.revenuecat.com/) API.
+- 🇫🇷 RC Premier League (RevenueCat Premier League) est un exemple d'implémentation de l'API de [RevenueCat](https://www.revenuecat.com/).
+- 🇺🇸🇬🇧 RC Premier League (RevenueCat Premier League) is a sample implementation of the [RevenueCat](https://www.revenuecat.com/) API.
 
 # Français 🇫🇷
 
