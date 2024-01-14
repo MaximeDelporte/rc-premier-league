@@ -9,15 +9,21 @@ import SwiftUI
 
 struct TeamListView: View {
     
+    @Binding var path: NavigationPath
+    
     @State var isPaywallPresented = false
+    @EnvironmentObject var userViewModel: UserViewModel
     
     private let teams = TeamHelper.allTeams
     
     var body: some View {
         VStack(spacing: 0, content: {
-            InvitationToUpgradeView(isPaywallPresented: $isPaywallPresented)
-                .padding(.top, 16)
-                .padding(.horizontal, 16)
+            
+            if userViewModel.isPremium == false {
+                InvitationToUpgradeView(isPaywallPresented: $isPaywallPresented)
+                    .padding(.top, 16)
+                    .padding(.horizontal, 16)
+            }
             
             ScrollView {
                 Spacer(minLength: 24)
@@ -25,11 +31,17 @@ struct TeamListView: View {
                 ForEach(Array(teams.enumerated()), id: \.element) { (index, team) in
                     let rank = index + 1
                     
-                    NavigationLink(destination: TeamDetailView(team: team)) {
-                        TeamListItemView(rank: rank, team: team)
-                            .padding(.horizontal, 16)
-                    }
-                    .buttonStyle(NoTapAnimationStyle())
+                    let destination = userViewModel.isPremium ? AnyView(TeamDetailView(team: team)) : AnyView(PaywallView(isPaywallPresented: $isPaywallPresented))
+                    
+                    TeamListItemView(rank: rank, team: team)
+                        .padding(.horizontal, 16)
+                        .onTapGesture {
+                            if userViewModel.isPremium {
+                                path.append(team)
+                            } else {
+                                isPaywallPresented = true
+                            }
+                        }
                 }
                 
                 Spacer(minLength: 24)
@@ -43,5 +55,6 @@ struct TeamListView: View {
 }
 
 #Preview {
-    TeamListView()
+    @State var path: NavigationPath = .init()
+    return TeamListView(path: $path)
 }

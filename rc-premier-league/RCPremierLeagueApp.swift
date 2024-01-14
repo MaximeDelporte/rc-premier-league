@@ -10,9 +10,13 @@ import SwiftUI
 
 @main
 struct RCPremierLeagueApp: App {
+    
+    @StateObject var userViewModel = UserViewModel()
+    
     var body: some Scene {
         WindowGroup {
            RCTabView()
+                .environmentObject(userViewModel)
         }
     }
     
@@ -34,14 +38,16 @@ struct RCPremierLeagueApp: App {
 private struct RCTabView: View {
     
     @State var tabSelection: Int = 0
+    @State var path: NavigationPath = .init()
     
-    private let views = [AnyView(TeamListView()), AnyView(AccountView())]
     private let navTitles = ["Premier League", "Account"]
     private let titles = ["Home", "Account"]
     private let imageNames = ["house.circle", "person.crop.circle"]
     
     var body: some View {
-        NavigationView {
+        let views = [AnyView(TeamListView(path: $path)), AnyView(AccountView())]
+        
+        NavigationStack(path: $path) {
             TabView(selection: $tabSelection) {
                 ForEach(0...1, id: \.self) { index in
                     views[index]
@@ -58,6 +64,9 @@ private struct RCTabView: View {
             UITabBar.appearance().barTintColor = backgroundColor
             UITabBar.appearance().backgroundColor = backgroundColor
         }
+        .navigationDestination(for: Team.self, destination: { team in
+            TeamDetailView(team: team)
+        })
     }
 }
 

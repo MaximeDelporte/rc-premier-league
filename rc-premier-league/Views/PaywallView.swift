@@ -56,8 +56,9 @@ struct PaywallView: View {
                                     
                                     Purchases.shared.purchase(package: package) { (transaction, customerInfo, error, userCancelled) in
                                         isPurchasing = false
+                                        
                                         if let customerInfo, customerInfo.entitlements["pro"]?.isActive == true {
-                                            // Unlock that great "pro" content
+                                            isPaywallPresented = false
                                         }
                                     }
                                 },

@@ -21,6 +21,7 @@
 		FC5931F72B530BEB0025387E /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5931F62B530BEB0025387E /* PaywallView.swift */; };
 		FC5931FC2B5338DE0025387E /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5931FB2B5338DE0025387E /* View+.swift */; };
 		FC5931FE2B5351AC0025387E /* SubscriptionPeriod+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5931FD2B5351AC0025387E /* SubscriptionPeriod+.swift */; };
+		FC5932012B535C560025387E /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5932002B535C560025387E /* UserViewModel.swift */; };
 		FCE279DA2B52237F00554456 /* ReceiptParser in Frameworks */ = {isa = PBXBuildFile; productRef = FCE279D92B52237F00554456 /* ReceiptParser */; };
 		FCE279DC2B52237F00554456 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = FCE279DB2B52237F00554456 /* RevenueCat */; };
 		FCE279DE2B52237F00554456 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = FCE279DD2B52237F00554456 /* RevenueCatUI */; };
@@ -46,6 +47,7 @@
 		FC5931F62B530BEB0025387E /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		FC5931FB2B5338DE0025387E /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		FC5931FD2B5351AC0025387E /* SubscriptionPeriod+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubscriptionPeriod+.swift"; sourceTree = "<group>"; };
+		FC5932002B535C560025387E /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		FCE279E22B52245600554456 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				FC3A6F692B519475000BAEF4 /* RCPremierLeagueApp.swift */,
 				FC0BC7492B51959D00A3DEC2 /* Common */,
 				FC0BC7442B51955800A3DEC2 /* Model */,
+				FC5931FF2B535C4A0025387E /* ViewModels */,
 				FC0BC74A2B51A2F500A3DEC2 /* Views */,
 				FC0BC74B2B51A30700A3DEC2 /* Resources */,
 			);
@@ -175,6 +178,14 @@
 				FC0BC7472B51959B00A3DEC2 /* TeamHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		FC5931FF2B535C4A0025387E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FC5932002B535C560025387E /* UserViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FCE279E12B52245600554456 /* Frameworks */ = {
@@ -272,6 +283,7 @@
 				FC5931F72B530BEB0025387E /* PaywallView.swift in Sources */,
 				FC5931FE2B5351AC0025387E /* SubscriptionPeriod+.swift in Sources */,
 				FC3A6F6A2B519475000BAEF4 /* RCPremierLeagueApp.swift in Sources */,
+				FC5932012B535C560025387E /* UserViewModel.swift in Sources */,
 				FC0BC75B2B51C0BC00A3DEC2 /* AccountView.swift in Sources */,
 				FC0BC7542B51B69600A3DEC2 /* TeamDetailView.swift in Sources */,
 				FC0BC7582B51B98B00A3DEC2 /* NoTapAnimationStyle.swift in Sources */,
