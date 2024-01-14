@@ -82,7 +82,7 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		FC0BC74A2B51A2F500A3DEC2 /* Features */ = {
+		FC0BC74A2B51A2F500A3DEC2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				FC0BC74C2B51A40500A3DEC2 /* TeamList */,
@@ -90,7 +90,7 @@
 				FC0BC75A2B51C0BC00A3DEC2 /* AccountView.swift */,
 				FC5931F62B530BEB0025387E /* PaywallView.swift */,
 			);
-			path = Features;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FC0BC74B2B51A30700A3DEC2 /* Resources */ = {
@@ -146,7 +146,7 @@
 				FC3A6F692B519475000BAEF4 /* RCPremierLeagueApp.swift */,
 				FC0BC7492B51959D00A3DEC2 /* Common */,
 				FC0BC7442B51955800A3DEC2 /* Model */,
-				FC0BC74A2B51A2F500A3DEC2 /* Features */,
+				FC0BC74A2B51A2F500A3DEC2 /* Views */,
 				FC0BC74B2B51A30700A3DEC2 /* Resources */,
 			);
 			path = "rc-premier-league";
