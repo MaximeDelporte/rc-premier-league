@@ -47,6 +47,7 @@ private struct RCTabView: View {
             TabView(selection: $tabSelection) {
                 ForEach(0...1, id: \.self) { index in
                     let firstPage = index == 0
+                    
                     if firstPage {
                         TeamListView(path: $path)
                             .tabItem {

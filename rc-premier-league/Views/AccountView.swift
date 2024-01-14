@@ -12,6 +12,7 @@ import SwiftUI
 struct AccountView: View {
     
     @EnvironmentObject var userViewModel: UserViewModel
+    @State private var showingRestoringPurchaseAlert = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0, content: {
@@ -26,11 +27,7 @@ struct AccountView: View {
             .padding(.vertical, 32)
             
             Button(
-                action: {
-                    Purchases.shared.restorePurchases(completion: { (customerInfo, error) in
-                        userViewModel.isSubscriptionActive = customerInfo?.entitlements["Pro"]?.isActive == true
-                    })
-                },
+                action: { showingRestoringPurchaseAlert = true },
                 label: {
                     Text("Restore Purchases")
                         .padding(.vertical, 16)
@@ -38,7 +35,30 @@ struct AccountView: View {
                         .background(.blue)
                         .foregroundStyle(.white)
                         .cornerRadius(8)
-                })
+                }
+            )
+            .alert(isPresented: $showingRestoringPurchaseAlert, content: {
+                if userViewModel.isSubscriptionActive {
+                    return Alert(
+                        title: Text("Information"),
+                        message: Text("You're already a premium customer"),
+                        dismissButton: .default(Text("Got it!"))
+                    )
+                } else {
+                    return Alert(
+                        title: Text("Information"),
+                        message: Text("Are you sure you want to subscribe again ?"),
+                        primaryButton: .default(Text("Yes"), action: {
+                            Purchases.shared.restorePurchases(completion: { (customerInfo, error) in
+                                userViewModel.isSubscriptionActive = customerInfo?.entitlements["Pro"]?.isActive == true
+                            })
+                        }),
+                        secondaryButton: .default(Text("No"), action: {
+                            showingRestoringPurchaseAlert = false
+                        })
+                    )
+                }
+            })
             
             Spacer()
         })
