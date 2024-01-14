@@ -31,17 +31,20 @@ struct TeamListView: View {
                 ForEach(Array(teams.enumerated()), id: \.element) { (index, team) in
                     let rank = index + 1
                     
-                    let destination = userViewModel.isSubscriptionActive ? AnyView(TeamDetailView(team: team)) : AnyView(PaywallView(isPaywallPresented: $isPaywallPresented))
-                    
-                    TeamListItemView(rank: rank, team: team)
-                        .padding(.horizontal, 16)
-                        .onTapGesture {
+                    Button(
+                        action: {
                             if userViewModel.isSubscriptionActive {
                                 path.append(team)
                             } else {
                                 isPaywallPresented = true
                             }
+                        },
+                        label: {
+                            TeamListItemView(rank: rank, team: team)
+                                .padding(.horizontal, 16)
                         }
+                    )
+                    .buttonStyle(NoTapAnimationStyle())
                 }
                 
                 Spacer(minLength: 24)
@@ -56,5 +59,7 @@ struct TeamListView: View {
 
 #Preview {
     @State var path: NavigationPath = .init()
+    
     return TeamListView(path: $path)
+        .environmentObject(UserViewModel())
 }

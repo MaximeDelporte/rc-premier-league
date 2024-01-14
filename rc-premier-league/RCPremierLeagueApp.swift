@@ -41,35 +41,40 @@ private struct RCTabView: View {
     @State var path: NavigationPath = .init()
     
     private let navTitles = ["Premier League", "Account"]
-    private let titles = ["Home", "Account"]
-    private let imageNames = ["house.circle", "person.crop.circle"]
     
     var body: some View {
-        let views = [AnyView(TeamListView(path: $path)), AnyView(AccountView())]
-        
         NavigationStack(path: $path) {
             TabView(selection: $tabSelection) {
                 ForEach(0...1, id: \.self) { index in
-                    views[index]
-                        .tabItem {
-                            Label(titles[index], systemImage: imageNames[index])
-                        }
+                    let firstPage = index == 0
+                    if firstPage {
+                        TeamListView(path: $path)
+                            .tabItem {
+                                Label("Home", systemImage: "house.circle")
+                            }
+                    } else {
+                        AccountView()
+                            .tabItem {
+                                Label("Account", systemImage: "person.crop.circle")
+                            }
+                    }
                 }
             }
             .tint(.primary)
             .navigationTitle(navTitles[tabSelection])
+            .navigationDestination(for: Team.self, destination: { team in
+                TeamDetailView(team: team)
+            })
         }
         .onAppear() {
             let backgroundColor = UIColor.systemGray6
             UITabBar.appearance().barTintColor = backgroundColor
             UITabBar.appearance().backgroundColor = backgroundColor
         }
-        .navigationDestination(for: Team.self, destination: { team in
-            TeamDetailView(team: team)
-        })
     }
 }
 
 #Preview {
     RCTabView()
+        .environmentObject(UserViewModel())
 }

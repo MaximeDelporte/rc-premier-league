@@ -28,7 +28,7 @@ struct AccountView: View {
             Button(
                 action: {
                     Purchases.shared.restorePurchases(completion: { (customerInfo, error) in
-                        userViewModel.isSubscriptionActive = customerInfo?.entitlements["pro"]?.isActive == true
+                        userViewModel.isSubscriptionActive = customerInfo?.entitlements["Pro"]?.isActive == true
                     })
                 },
                 label: {
@@ -48,4 +48,5 @@ struct AccountView: View {
 
 #Preview {
     AccountView()
+        .environmentObject(UserViewModel())
 }

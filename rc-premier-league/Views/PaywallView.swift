@@ -59,7 +59,7 @@ struct PaywallView: View {
                                     Purchases.shared.purchase(package: package) { (transaction, customerInfo, error, userCancelled) in
                                         isPurchasing = false
                                         
-                                        if let customerInfo, customerInfo.entitlements["pro"]?.isActive == true {
+                                        if let customerInfo, customerInfo.entitlements["Pro"]?.isActive == true {
                                             userViewModel.isSubscriptionActive = true
                                             isPaywallPresented = false
                                         }

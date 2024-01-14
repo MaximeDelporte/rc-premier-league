@@ -15,7 +15,7 @@ class UserViewModel: ObservableObject {
     
     init() {
         Purchases.shared.getCustomerInfo(completion: { (customerInfo, error) in
-            self.isSubscriptionActive = customerInfo?.entitlements.all["pro"]?.isActive == true
+            self.isSubscriptionActive = customerInfo?.entitlements.all["Pro"]?.isActive == true
         })
     }
 }
