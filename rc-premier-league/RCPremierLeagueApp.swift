@@ -21,6 +21,9 @@ struct RCPremierLeagueApp: App {
     }
     
     init() {
+        /*
+        API_KEY and APP_USER_ID are set 
+         */
         guard let dictionary: [String: Any] = Bundle.main.infoDictionary,
               let apiKey: String = dictionary["API_KEY"] as? String,
               let appUserID = dictionary["APP_USER_ID"] as? String else {

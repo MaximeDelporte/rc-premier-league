@@ -45,16 +45,16 @@ Paywall invisible: ✅
 
 ### Free
 
-List of teams: ✅
-Account information: ✅
-Incentive to pay in invisible team list screen: ❌
-Team details: ❌
-Invisible paywall: ❌
+- List of teams: ✅
+- Account information: ✅
+- Incentive to pay in invisible team list screen: ❌
+- Team details: ❌
+- Invisible paywall: ❌
 
 ### Pro
 
-List of teams: ✅
-Account information: ✅
-Incentive to pay in invisible team list screen: ✅
-Team details: ✅
-Invisible paywall: ✅
+- List of teams: ✅
+- Account information: ✅
+- Incentive to pay in invisible team list screen: ✅
+- Team details: ✅
+- Invisible paywall: ✅
