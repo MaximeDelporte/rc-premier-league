@@ -12,8 +12,10 @@ import SwiftUI
 struct PaywallView: View {
     
     @Binding var isPaywallPresented: Bool
+    
     @State var isPurchasing = false
     @State var currentOffering: Offering?
+    @EnvironmentObject var userViewModel: UserViewModel
     
     var body: some View {
         ZStack {
@@ -58,6 +60,7 @@ struct PaywallView: View {
                                         isPurchasing = false
                                         
                                         if let customerInfo, customerInfo.entitlements["pro"]?.isActive == true {
+                                            userViewModel.isSubscriptionActive = true
                                             isPaywallPresented = false
                                         }
                                     }

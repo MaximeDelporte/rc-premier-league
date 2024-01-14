@@ -11,11 +11,11 @@ import SwiftUI
 
 class UserViewModel: ObservableObject {
     
-    @Published var isPremium = false
+    @Published var isSubscriptionActive = false
     
     init() {
         Purchases.shared.getCustomerInfo(completion: { (customerInfo, error) in
-            self.isPremium = customerInfo?.entitlements.all["pro"]?.isActive == true
+            self.isSubscriptionActive = customerInfo?.entitlements.all["pro"]?.isActive == true
         })
     }
 }

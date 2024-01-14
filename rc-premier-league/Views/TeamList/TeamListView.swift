@@ -19,7 +19,7 @@ struct TeamListView: View {
     var body: some View {
         VStack(spacing: 0, content: {
             
-            if userViewModel.isPremium == false {
+            if userViewModel.isSubscriptionActive == false {
                 InvitationToUpgradeView(isPaywallPresented: $isPaywallPresented)
                     .padding(.top, 16)
                     .padding(.horizontal, 16)
@@ -31,12 +31,12 @@ struct TeamListView: View {
                 ForEach(Array(teams.enumerated()), id: \.element) { (index, team) in
                     let rank = index + 1
                     
-                    let destination = userViewModel.isPremium ? AnyView(TeamDetailView(team: team)) : AnyView(PaywallView(isPaywallPresented: $isPaywallPresented))
+                    let destination = userViewModel.isSubscriptionActive ? AnyView(TeamDetailView(team: team)) : AnyView(PaywallView(isPaywallPresented: $isPaywallPresented))
                     
                     TeamListItemView(rank: rank, team: team)
                         .padding(.horizontal, 16)
                         .onTapGesture {
-                            if userViewModel.isPremium {
+                            if userViewModel.isSubscriptionActive {
                                 path.append(team)
                             } else {
                                 isPaywallPresented = true
